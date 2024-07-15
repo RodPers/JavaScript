@@ -1,0 +1,197 @@
+AULA 01
+window.alert('Eh o manikas hehe') //cria um alerta
+window.confirm('está gostando de JS?') //cria um pop de confirmção
+window.prompt('qual é seu nome?') //cria uma linha de formulário
+________________________________________________________
+AULA 02
+var em JS podem começar com letra, $ ou _
+Não pode começar com numeros
+pode usar letras e numeros
+pode usar acentos e símbolos
+não pode ter espaço
+não pode usar palavras reservadas (ex 'function', 'alert', etc)
+DICKas
+Maiúsculas e minúsculas fazem diferença
+Nomes coerentes
+
+> typeof function(){}
+'function'
+> typeof null
+'object'
+-----------------------------------------------------------------
+AULA 03
+manipulação de dados
+
+o guana não falou, mas: 
+var não se usa mais, usa-se let e const para variáveis
+
+let para variáveis que serão modificadas
+const para variáveis que serão fixas (constantes)
+
+var nome = window.prompt('qual é seu nome?') //cria uma linha de formulário
+window.alert('é um grande prazer em te conhecer, ' + nome) //concatenação
+
+window.prompt() retorna uma string
+
+converter para numero
+number.parseInt(n) ou só parseInt(n) para inteiro
+number.parseFloat(n) ou só parseFloat(n) para float
+var n1 = parseInt(window.prompt('digite um número'))
+var n2 = parseInt(window.prompt('digite outro numero'))
+
+para funções q nao ha necessidade de forçar um tipo, use Number()
+
+converter para uma string
+String(n)
+n.toString()
+
+Template String
+> nome = 'gustavo'
+'gustavo'
+> idade = 41
+41
+> nota = 5.5
+5.5
+> `O aluno ${nome} com ${idade} anos de idade tirou a nota ${nota} `
+'O aluno gustavo com 41 anos de idade tirou a nota 5.5 '
+
+var s = 'JavaScript'
+s.length diz quantos caracteres a string tem
+s.toUpperCase() deixa os caracteres da String em caixa alta
+s.toLowerCase() deixa os caracteres da String em caixa baixa
+
+-------------------------OPERADORES----------------------------
+
+Oeradores aritméticos:
++ -> soma
+- -> subtração
+* -> multiplicação
+/ -> divisão
+% -> resto da divisão
+** -> potenciação
+
+> 5 + 3 / 2
+6.5
+> (5 + 3)/2
+4
+
+Operadores relacionais
+
+> maior
+< menor
+>= maior igual
+<= menor igual
+== igual a
+!= diferente de 
+
+5 == 5 -> true
+5 == '5' -> true (tem o mesmo valor, mas tipo diferente)
+5 === '5' -> false
+
+operadores lógicos
+
+! negação
+&& 'e' lógico
+|| 'ou' lógico
+
+precedência 
+aritméticos
+relacionais
+!
+&&
+||
+
+operadores ternários
+
+teste ? True : False
+ex:
+média >= 7?"aprovado":"reprovado" 
+
+-------------------------DOM-------------------------------------
+document object model
+
+árvore DOM
+
+window -> location 
+          history  
+          document -> html -> head -> meta, title, ...
+                              body -> h1, p, p, div, ...
+
+selecionando DOMS
+
+por Marca
+
+getElementsByTagName() 
+seleciona mais de um objeto
+
+
+por id
+por nome
+por classe
+por seletor
+
+.innerText seleciona o texto da tag selecionada 
+ex: p.innerText
+
+.innerHTML seleciona o conteúdo da tag selecionada
+ex: p.innerHTML
+
+getElementsById()
+seleciona objetos com aquele Id
+
+getElementsByName()
+seleciona objetos pelo comando "name" do HTML
+
+getElementsByClass()
+seleciona elementos com aquela classe atribuída
+
+querySelector() ou querySelectorAll()
+document.querySelector('div#msg')
+
+estamos selecionando a div que tem o id 'msg'
+
+-------------------EVENTOS DOM----------------------------
+
+tudo aquilo que possa acontecer com algum elemento
+
+mouseenter
+mousemove
+mousedown
+mouseup
+click
+mouseout
+
+to see more about Events, browse: https://www.w3schools.com/jsref/dom_obj_event.asp
+
+funcoes:
+
+para delimitar uma função, use 'function' e o nome da função em seguida, colocando os eventos entre colchetes '{}'
+
+ex: function calcula(){
+    var x1 = document.getElementsById('xereca')
+    var x2 = document.getElementsByName('buceta')
+    resultado = x1 + x2
+    return resultado
+}
+
+.addEventListener("[EVENTO DOM]", [função desejada])
+adiciona um evento relacionado a uma função pré-estabelecida
+
+exemplo:
+
+var a = window.document.getElementsById("area")
+a.addEventListener("click", clicou)
+
+clicou() {
+    bla bla bla
+}
+
+-------------------------------condições---------------------
+
+ if e else 
+ 
+ if (condição){
+    xerecas
+ } else {
+    xerecas
+ }
