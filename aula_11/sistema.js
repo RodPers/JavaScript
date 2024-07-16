@@ -1,11 +1,10 @@
-
-
 function calcular(){
-    let velocidade = Number(document.getElementById("velocidade").value)
-    if (velocidade <= 60){
-        window.alert(`MALANDRO! Sua velocidade "${velocidade}"km/h estava acima do permitido! SE FUDEU`)
-    } else {
-        window.alert(`Passou perto ein. A ${velocidade}km/h até minha vó anda.`)
-    } 
-    
+    var txtv = window.document.querySelector("input#txtvel")
+    var res = window.document.querySelector("div#res")
+    var vel = Number(txtv.value)
+    res.innerHTML = `<p>sua velocidade atual é de <strong>${vel}Km/h.</strong></p>`
+    if (vel > 60){
+        res.innerHTML += `<p>Você está multado! por excesso de velocidade</p>`
+    }
+    res.innerHTML += `<p>Dirija sempre com segurança</p>`
 }
