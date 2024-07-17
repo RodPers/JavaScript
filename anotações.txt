@@ -1,3 +1,7 @@
+F8 executa os código
+
+
+
 AULA 01
 window.alert('Eh o manikas hehe') //cria um alerta
 window.confirm('está gostando de JS?') //cria um pop de confirmção
